@@ -82,7 +82,7 @@ label, .label {
 }
 
 .modal {
-  @apply absolute;
+  @apply fixed;
   @apply top-0;
   @apply left-0;
   @apply right-0;
