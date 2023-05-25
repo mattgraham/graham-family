@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :home
   resources :ella
   resources :madisyn
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :results, only: [:index, :show]
 
   # Defines the root path route ("/")
   root "home#index"
