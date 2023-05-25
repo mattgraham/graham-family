@@ -1,0 +1,56 @@
+<div class="bg-pink hero w-100 flex flex-column items-center">
+    <div class="flex-auto"></div>
+    <%= image_tag "Family2023-36.jpg", alt:"", class: "w-full" %>
+    
+</div>
+
+<div id="details" class="my-10 w-full max-w-5xl mx-auto p-4">
+    <div class="w-full text-center mb-12">
+        <div class="text-2xl text-slate-600 mb-3 text-center">Ella's Birth Data</div>
+        <div class="w-full text-center">
+                            
+            <div class="mb-3">
+                <div class="font-bold mr-1">Born:</div>
+                <div class="">December 8, 2020 at 8:13 PM</div>
+            </div>
+            <div class="mb-3">
+                <div class="font-bold mr-1">Measurements:</div>
+                <div class="db dtc-ns">7lb 5oz and 20" long</div>
+            </div>
+
+            <div class="mb-3">
+                <div class="font-bold mr-1">Current Age:</div>
+                <div class="db dtc-ns">
+                    <% date_of_birth = '2020-12-08' %>
+                    <%= @age %>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <div id="video" class="text-center my-3">
+        <div class="w-100 mw8 center pa3">
+            <div class="text-2xl text-slate-600 my-10">Baby Announcement Video</div>
+
+            <div class="mv5">
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/XPeDzD0klkE' frameborder='0' allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center my-3">
+        <div class="w-100 mw8 center pa3">
+            <div class="text-2xl text-slate-600 my-10">Gender Reveal Video</div>
+
+            <div class="mb-4">
+                <video width="100%" controls poster="/assets/gender-reveal.jpg">
+                    <source src="https://www.dropbox.com/s/nb333jz3z765oa7/Baby%20Graham.mov?raw=1" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
