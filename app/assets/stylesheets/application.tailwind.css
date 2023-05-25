@@ -58,7 +58,7 @@ label, .label {
   @apply relative;
   @apply rounded;
   @apply bg-white;
-  @apply text-sm;
+  @apply text-xs;
   @apply text-center;
   @apply font-medium;
   @apply leading-5;
