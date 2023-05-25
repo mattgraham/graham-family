@@ -1,17 +1,16 @@
 <div class="px-2 py-4 md:px-4 flex items-center bg-white/40">
     <%= link_to root_path do %>
-        <div class="hidden md:flex text-sm md:text-2xl font-bold">Graham Family</div>
-        <div class="flex md:hidden text-sm md:text-2xl font-bold">The Graham's</div>
+        <div class="text-sm md:text-2xl font-bold">Graham Family</div>
     <% end %>
     <div class="flex-auto"></div>
     <ul class="flex items-center text-xs md:text-sm">
-        <li class="ml-3 uppercase tracking-widest">
+        <li class="ml-2 md:ml-3 uppercase tracking-widest">
             <%= link_to ella_index_path, class: "text-pink-500 hover:text-pink-300" do %>Ella<% end %>
         </li>
-        <li class="ml-3 uppercase tracking-widest">
+        <li class="ml-2 md:ml-3 uppercase tracking-widest">
             <%= link_to madisyn_index_path, class: "text-pink-500 hover:text-pink-300" do %>Madisyn<% end %>
         </li>
-        <li class="ml-3">
+        <li class="ml-3 md:ml-4">
             <%= link_to predictions_path, class: "button--primary mx-auto text-xs font-normal", data: { turbo_frame: "modal"} do %>Guess the Date<% end %>   
         </li>
     </ul>
