@@ -8,7 +8,9 @@
         <th class="text-left p-3 text-sm uppercase">Phone</th>
         <th class="text-right p-3 text-sm uppercase">Submitted</th>
     </tr>
+    <% count = 0 %>
     <% @results.order(:date, :time).each do |p| %>
+        <% count = count+1 %>
         <tr class="odd:bg-slate-100 text-sm">
             <td class="p-3"><%= p.last_name %>, <%= p.first_name %></td>
             <td class="p-3">June <%= p.date %></td>
@@ -23,6 +25,5 @@
         </tr>
     <% end %>
     </table>
-
-
+    <div class="bg-pink-100 text-sm text-pink-600 w-full rounded-lg px-3 py-1 my-4"><%= count %> Guesses</div>
 </div>

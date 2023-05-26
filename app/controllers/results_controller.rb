@@ -1,5 +1,9 @@
 class ResultsController < ApplicationController
-    def index
-        @results = Prediction.all
+    def index        
+        if params[:code] = "2023"
+            @results = Prediction.all
+        else
+            redirect_to root_path
+        end
     end
 end
