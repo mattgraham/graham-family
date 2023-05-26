@@ -79,6 +79,10 @@ label, .label {
   @apply bg-pink-600;
   @apply hover:bg-pink-700;
   @apply ring-pink-700/10;
+
+  @apply disabled:bg-slate-100;
+  @apply disabled:text-slate-300;
+  @apply disabled:cursor-not-allowed;
 }
 
 .modal {

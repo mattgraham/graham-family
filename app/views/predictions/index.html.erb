@@ -52,6 +52,7 @@
           </div>
           
           <div class="mb-3 font-bold text-pink-500">June</div>
+          
           <div class="days grid grid-cols-7 gap-3 mx-auto">
             <div class="p-1 md:p-3 border border-slate-100 rounded text-slate-500"></div>
             <div class="p-1 md:p-3 border border-slate-100 rounded text-slate-500"></div>
@@ -59,7 +60,7 @@
             <div class="p-1 md:p-3 border border-slate-100 rounded text-slate-500"></div>
             <% 30.times do |i| %>
               <%= f.radio_button :date, i+1, class: "hidden peer" %>
-                <label for="date_<%=i+1%>" class="p-1 md:p-3 border border-pink-200 rounded text-pink-500 checked:text-blue-500 hover:scale-125 bg-white transition-all text-center">
+                <label for="date_<%=i+1%>" onclick="dateSubmit()" class="p-1 md:p-3 border border-pink-200 rounded text-pink-500 checked:text-blue-500 hover:scale-125 bg-white transition-all text-center">
                 <%= i+1 %>
               </label>
             <% end %> 
@@ -69,12 +70,20 @@
             <%= f.time_field :time, class: "w-full mb-3", :required => true %>
           </div>
           <div class="my-4">
-            <%= f.submit "Submit", class: "py-2 px-3 rounded bg-pink-400 text-white w-full" %>
+            <div id="mustDate" class="text-center mb-3 text-pink-500">You must choose a date first</div>
+            <%= f.submit "Submit", id: "submit", class: "button--primary w-full", :disabled => true %>
           </div>
         <% end %>
       </div>
     </div>
 
   </div>
+
+<script>
+  function dateSubmit() {
+      document.getElementById('mustDate').hidden = true;
+      document.getElementById('submit').disabled = false;
+  }
+</script>
 
 <% end %>

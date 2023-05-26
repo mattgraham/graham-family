@@ -21,8 +21,8 @@ class PredictionsController < ApplicationController
 
   # POST /predictions or /predictions.json
   def create
-    @prediction = Prediction.new(prediction_params)
-
+    @prediction = Prediction.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], phone: params[:phone].delete('^0-9'), date: params[:date], time: params[:time])
+    
     respond_to do |format|
       if @prediction.save
         format.html { redirect_to root_path, notice: "Prediction was successfully created." }
@@ -55,6 +55,6 @@ class PredictionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def prediction_params
-      params.permit(:prediction, :first_name, :last_name, :email, :phone, :date, :time)
+      params.permit(:first_name, :last_name, :email, :phone, :date, :time)
     end
 end
