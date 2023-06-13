@@ -21,8 +21,7 @@
             <% if params[:code].present? && params[:code] == 'graham' %>
                 <%= p.last_name %>
             <% else %>
-                <%= p.last_name[0] %>
-            <% end %>, <%= p.first_name %></td>
+                <%= p.last_name[0] %><% end %>, <%= p.first_name %></td>
             <td class="p-3">June <%= p.date %></td>
             <td class="p-3">
                 <% time = p.time %>
