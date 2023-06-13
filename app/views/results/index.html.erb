@@ -8,14 +8,21 @@
         <th class="text-left p-3 text-sm uppercase">Name</th>
         <th class="text-left p-3 text-sm uppercase">Date</th>
         <th class="text-left p-3 text-sm uppercase">Time</th>
-        <th class="text-left p-3 text-sm uppercase">Phone</th>
-        <th class="text-right p-3 text-sm uppercase">Submitted</th>
+        <% if params[:code].present? && params[:code] == 'graham' %>
+            <th class="text-left p-3 text-sm uppercase">Phone</th>
+            <th class="text-right p-3 text-sm uppercase">Submitted</th>
+        <% end %>
     </tr>
     <% count = 0 %>
     <% @results.order(:date, :time).each do |p| %>
         <% count = count+1 %>
         <tr class="odd:bg-slate-100 text-sm">
-            <td class="p-3"><%= p.last_name %>, <%= p.first_name %></td>
+            <td class="p-3">
+            <% if params[:code].present? && params[:code] == 'graham' %>
+                <%= p.last_name %>
+            <% else %>
+                <%= p.last_name[0] %>
+            <% end %>, <%= p.first_name %></td>
             <td class="p-3">June <%= p.date %></td>
             <td class="p-3">
                 <% time = p.time %>
@@ -23,8 +30,11 @@
                     time.strftime("%I:%M %p")
                 %>
             </td>
-            <td class="p-3"><%= p.phone %></td>
-            <td class="text-right p-3 text-slate-500"><%= p.created_at.strftime("%B %-d, %I:%M %p") %></td>
+            <% if params[:code].present? && params[:code] == 'graham' %>
+                <td class="p-3"><%= p.phone %></td>
+                <td class="text-right p-3 text-slate-500"><%= p.created_at.strftime("%B %-d, %I:%M %p") %></td>
+            <% end %>
+
         </tr>
     <% end %>
     </table>
