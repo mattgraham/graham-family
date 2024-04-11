@@ -1,26 +1,32 @@
 <div class="bg-pink hero w-100 flex flex-column items-center">
     <div class="flex-auto"></div>
-    <%= image_tag "madisyn_pre.jpg", alt:"", class: "w-full" %>
+    <%= image_tag "Family2024-54.jpg", alt:"", class: "w-full" %>
     
 </div>
 
 <div id="details" class="my-10 w-full max-w-5xl mx-auto p-4">
     <div class="w-full text-center mb-12">
-        <div class="text-2xl text-slate-600 mb-3 text-center">Madisyn Joy (Joy) Graham</div>
-        <div class="w-full text-center mb-6">
+        <div class="text-2xl text-slate-600 mb-3 text-center">Madisyn Joy</div>
+        <div class="w-full text-center">
                             
             <div class="mb-3">
-                <div class="font-bold mr-1">Official Due Date:</div>
-                <div class="">July 6, 2023</div>
+                <div class="font-bold mr-1">Born:</div>
+                <div class="">June 29, 2023</div>
             </div>
             <div class="mb-3">
-                <div class="font-bold mr-1">Scheduled Delivery Date:</div>
-                <div class="db dtc-ns">June 29, 2023</div>
+                <div class="font-bold mr-1">Measurements:</div>
+                <div class="db dtc-ns">7lb 5oz and 20" long</div>
             </div>
 
+            <div class="mb-3">
+                <div class="font-bold mr-1">Current Age:</div>
+                <div class="db dtc-ns">
+                    <% date_of_birth = '2023-06-29' %>
+                    <%= @age %>
+                </div>
+            </div>
         </div>
-
-        <%= link_to predictions_path, class: "button--primary mx-auto text-xs font-normal", data: { turbo_frame: "modal"} do %>Guess the Date<% end %>   
+    
     </div>
 
     

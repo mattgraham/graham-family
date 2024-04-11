@@ -1,7 +1,7 @@
 class MadisynController < ApplicationController
     def index
 
-        dob = Date.new(2020, 12, 18)
+        dob = Date.new(2023, 06, 29)
         def age(dob, today=nil)
             return "No date of birth" if dob.nil?
             today ||= Date.current
