@@ -121,6 +121,7 @@ GEM
     method_source (1.0.0)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.5)
     minitest (5.18.0)
     msgpack (1.7.1)
     mysql2 (0.5.5)
@@ -134,9 +135,8 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.2-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.2)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -193,6 +193,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-arm64-darwin)
+      railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x86_64-darwin)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x86_64-linux)
@@ -223,6 +225,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  arm64-darwin-23
   x86_64-darwin-22
   x86_64-linux
 
@@ -249,7 +252,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.3p185
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.4.13
