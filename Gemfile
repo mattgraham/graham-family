@@ -11,7 +11,7 @@ gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
-gem "tailwindcss-rails"
+gem "tailwindcss-rails", "~> 2.0.32"
 gem "chartkick"
 gem "groupdate"
 
